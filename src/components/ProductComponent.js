@@ -26,7 +26,7 @@ const ProductComponent = () => {
                 <img className="h-60 w-44 p-2" src={image} alt="pic"></img>
                 <h2>$ {price}</h2>
                 <button
-                  className="bg-rose-500 rounded-xl p-4 text-white hover:bg-rose-900"
+                  className="bg-orange-400 rounded-xl p-4 text-white hover:bg-rose-900"
                   onClick={() =>
                     
                     addBasket({ urun: product, urunID: product.id })
