@@ -5,13 +5,15 @@ import { Route, Routes } from "react-router-dom";
 import Cart from "./components/Cart";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
-import { getProducts } from "./redux/actions/productAction";
+import { getProducts, selectedProduct } from "./redux/actions/productAction";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import ProductDetail from "./components/ProductDetail";
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getProducts());
+
   });
 
   return (
@@ -20,6 +22,7 @@ function App() {
       <Routes>
         <Route path="/" element={<ProductComponent />} />
         <Route exact path="/cart" element={<Cart />} />
+        <Route exact path="/product/:productId" element={<ProductDetail/>}/>
       </Routes>
       <ToastContainer />
       

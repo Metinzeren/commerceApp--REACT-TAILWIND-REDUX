@@ -4,6 +4,7 @@ const INITIAL_STATE = {
   products: [],
   productLoading: false,
   basketList: [],
+  
 };
 
 export const productReducer = (state = INITIAL_STATE, action) => {
@@ -56,6 +57,7 @@ export const productReducer = (state = INITIAL_STATE, action) => {
            )
       };
     }
+   
 
     default:
       return state;
